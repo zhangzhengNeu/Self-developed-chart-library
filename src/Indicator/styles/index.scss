@@ -1,0 +1,93 @@
+.base-rocketChart-indicator {
+    position: relative;
+    font-family: Helvetica;
+    font-size: 11px;
+    background: inherit;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    .card {
+      &-cont {
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        &-unit {
+          font-size: 11px;
+          margin-left: 3px;
+        }
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 12px;
+        height: 17px;
+        line-height: 17px;
+        &-item {
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+          &-text {
+            margin-left: 10px;
+          }
+          &-icon {
+            margin-left: 5px;
+            .anticon {
+              display: inline-block;
+              color: inherit;
+              font-style: normal;
+              line-height: 0;
+              text-align: center;
+              text-transform: none;
+              vertical-align: -.2em;
+              text-rendering: optimizeLegibility;
+              -webkit-font-smoothing: antialiased;
+            }
+          }
+          &-title::after{
+            content: '：';
+            display: inline-block;
+            width: 0;
+            height: 0;
+          }
+        }
+      }
+    }
+}
+
+// .light {
+//   background: $light;
+//   .card {
+//     &-title {
+//       color: $basic-indicator-light-grey;
+//     }
+//     &-cont {
+//       color: $basic-indicator-light-fontColor;
+//       &-unit {
+//         color: $basic-indicator-light-fontColor;
+//       }
+//     }
+//     &-footer {
+//       color: $basic-indicator-light-footer;
+//     }
+//   }
+// }
+// .dark {
+//   background: $dark;
+//   .card {
+//     &-title {
+//       color: $basic-indicator-dark-fontColor;
+//     }
+//     &-cont {
+//       color: $basic-indicator-dark-unit;
+//       &-unit {
+//         color:  $basic-indicator-dark-unit;
+//       }
+//     }
+//     &-footer {
+//       color: $basic-indicator-dark-footer;
+//     }
+//   }
+// }

@@ -1,0 +1,38 @@
+import base from './base';
+export default {
+  ...base,
+  color: [
+    '#5f78ef',
+    '#5AD8A6',
+    '#5D7092',
+    '#F6BD16',
+    '#E86452',
+    '#6DC8EC',
+    '#945FB9',
+    '#FF9845',
+    '#1E9493',
+    '#FF99C3',
+
+    '#7b68e3',
+    '#38ab30',
+    '#7b9ccc',
+    '#a3d714',
+    '#ca0255',
+    '#a09ae4',
+    '#c313c3',
+    '#e6a356',
+    '#19b9c8',
+    '#cbecc1',
+
+    '#CDDDFD',
+    '#CDF3E4',
+    '#CED4DE',
+    '#FCEBB9',
+    '#F8D0CB',
+    '#D3EEF9',
+    '#DECFEA',
+    '#FFE0C7',
+    '#BBDEDE',
+    '#FFE0ED',
+  ],
+};

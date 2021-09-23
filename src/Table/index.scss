@@ -1,0 +1,186 @@
+$fontColor: rgba(0, 0, 0, 0.65);
+$fontColorDark: #ccc;
+
+.rocketChart-table {
+  background-color: inherit;
+
+  color: $fontColor;
+
+  th,
+  td,
+  .rocketChart-table-summaryItem {
+    font-size: var(--table-font-size);
+    padding: 0 6px !important; //fix 垂直内边距影响高度设置
+  }
+
+  // fix 透视表高度不读取配置
+  .art-table-cell {
+    height: var(--row-height) !important;
+  }
+
+  .art-table-header-row th {
+    font-weight: 500;
+  }
+  // 空数据移除上下边框
+  .art-empty-table-cell {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+  }
+  .art-empty-wrapper {
+    font: 20px 'STHeiti', sans-serif;
+    color: #666;
+  }
+
+  &-bottom {
+    overflow: hidden;
+    // position: -webkit-sticky; /* for Safari */
+    // position: sticky;
+    // bottom: 0;
+    // z-index: 30; // important
+  }
+  &-summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // z-index: 30;
+  }
+  &-summaryLeft,
+  &-summaryRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background: inherit;
+  }
+  &-summaryLeft {
+    left: 0;
+  }
+  &-summaryRight {
+    right: 0;
+  }
+  &-summaryInner {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &-summaryItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &-pagination {
+    margin-top: 6px;
+    overflow: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-direction: row-reverse;
+    font-size: 12px;
+  }
+  &-total {
+    margin-right: 8px;
+  }
+  .MuiInputBase-root {
+    margin-right: 4px;
+    color: currentColor;
+  }
+  .MuiOutlinedInput-input {
+    padding: 4px;
+  }
+  .MuiPagination-root {
+    ul {
+      flex-wrap: nowrap;
+    }
+    .MuiPaginationItem-root,
+    .MuiPaginationItem-icon {
+      color: currentColor;
+      font-size: 14px;
+    }
+  }
+  .MuiSelect-root {
+    font-size: 12px;
+    color: currentColor;
+  }
+  .MuiInput-underline:before {
+    border-bottom-color: currentColor;
+  }
+  .MuiPaginationItem-page.Mui-selected {
+    border-color: #47abfc;
+    color: #47abfc;
+    background: transparent;
+  }
+  @at-root {
+    .MuiTooltip-tooltip.rocket-tooltips {
+      font-size: 12px;
+    }
+  }
+}
+.rocket-chart-ellipsisCell {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  * {
+    white-space: nowrap;
+  }
+}
+
+.rocketChart-table-dark {
+  color: $fontColorDark;
+  .MuiSelect-select,
+  .MuiPaginationItem-root,
+  .MuiSelect-icon {
+    color: $fontColorDark;
+  }
+  .MuiInputBase-root {
+    background-color: #555;
+  }
+
+  .rocketChart-table-summary {
+    background: #272727;
+    color: #20a0ff;
+    border-top: 1px #3c3c3c solid;
+    border-bottom: 1px #3c3c3c solid;
+  }
+
+  .anticon {
+    color: $fontColorDark;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    // height: 10px;
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #464646;
+  }
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid #464646;
+    border-radius: 8px;
+    background-color: #c0c0c0;
+  }
+  .art-sticky-scroll {
+    // margin-top: -11px !important;
+  }
+  // scrollbar-width:10px;
+  // scrollbar-height:10px;
+  scrollbar-track-color: #464646;
+  scrollbar-color: #c0c0c0 transparent;
+}
+
+.rocketChart-table-mobile {
+  .rocketChart-table-pagination {
+    margin-top: 3px;
+    width: 125%;
+    transform: scale(0.8);
+    transform-origin: left top;
+  }
+}
